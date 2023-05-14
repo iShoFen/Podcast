@@ -15,6 +15,7 @@ struct DetailView: View {
             ScrollView {
                 DetailHeaderView(podcast: podcast)
                     .padding(.bottom, -16)
+                    
                    
                 HStack {
                     Text("Épisodes")
@@ -45,6 +46,7 @@ struct DetailView: View {
             }
         }
         .background(PodcastColors.backgroundPrimary)
+        .ignoresSafeArea()
     }
 }
 

@@ -64,6 +64,7 @@ struct DetailHeaderView: View {
         
         }
         .padding()
+        .padding(.top, 64)
         .background(background)
 
     }
