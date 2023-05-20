@@ -11,7 +11,7 @@ extension Int {
     var stringSuffix: String {
         let sign = ((self < 0) ? "-" : "")
         var absNum = abs(Double(self))
-        let abbrev = ["", "k", "M", "Md"]
+        let abbrev = ["", " k", " M", " Md"]
         var index = 0
         
         while absNum >= 1000 && index <= abbrev.count {
@@ -23,8 +23,7 @@ extension Int {
         formatter.roundingMode = .up
         formatter.decimalSeparator = ","
         formatter.maximumFractionDigits = (index > 0) ? 1 : 0
-        formatter.minimumFractionDigits = (index > 0) ? 1 : 0
 
-        return "\(sign)\(formatter.string(from: NSNumber(value: absNum)) ?? "") \(abbrev[index])"
+        return "\(sign)\(formatter.string(from: NSNumber(value: absNum)) ?? "")\(abbrev[index])"
     }
 }
