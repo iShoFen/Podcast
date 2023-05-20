@@ -29,7 +29,7 @@ struct PlayerView: View {
                 .scaledToFit()
                 .cornerRadius(8)
                 .shadow(radius: 10)
-                .frame(height: height * 2)
+                .frame(height: height * 1.5)
             
             VStack(alignment: .leading) {
                 Text(selectedEpisodeName ?? "")
@@ -57,7 +57,8 @@ struct PlayerView: View {
             .frame(height: height / 1.5)
 
         }
-        .padding()
+        .padding(.horizontal)
+        .padding(.bottom, 10)
     }
 }
 
