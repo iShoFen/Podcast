@@ -20,10 +20,10 @@ extension TimeInterval {
         
         let components = formattedInterval.components(separatedBy: " ")
         let joinedComponents = components.joined(separator: " et ")
-        
+
         return joinedComponents
             .replacingOccurrences(of: "h", with: " h")
-            .replacingOccurrences(of: "m", with: " min")
+            .replacingOccurrences(of: "m( |$)|min( |$)", with: " min", options: .regularExpression)
             .replacingOccurrences(of: "s", with: " s")
     }
 }
