@@ -27,14 +27,11 @@ struct EpisodesListView: View {
                             
                         Button {} label: {
                             Image(systemName: "chevron.down")
-                                .foregroundColor(PodcastColors.ForegroundTertiary)
                         }
-                                
+                        Spacer()
                         Button {} label: {
                             Text("Tout voir")
-                                .foregroundColor(PodcastColors.ForegroundTertiary)
                                 .font(.title3)
-                                .frame(maxWidth: .infinity, alignment: .trailing)
                         }
                             
                             

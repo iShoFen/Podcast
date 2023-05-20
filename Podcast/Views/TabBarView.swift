@@ -38,7 +38,6 @@ struct TabBarView: View {
                 }
             }
         }
-        .tint(PodcastColors.ForegroundTertiary)
     }
 }
 

@@ -56,7 +56,6 @@ struct EpisodeView: View {
                     togglePlayingEpisode(episode)
                 } label: {
                     Image(systemName: "play.fill")
-                        .foregroundColor(PodcastColors.ForegroundTertiary)
                         .padding(10)
                 }
                 .background(PodcastColors.Button)
@@ -64,14 +63,13 @@ struct EpisodeView: View {
                 
                 if episode.isPlaying {
                     ProgressView(value: 0.01)
-                        .accentColor(PodcastColors.ForegroundTertiary)
                     Text("Il reste")
-                        .foregroundColor(PodcastColors.ForegroundTertiary)
+                        .foregroundColor(.accentColor)
                 }
                 
 
                 Text(episode.time.formatToString)
-                    .foregroundColor(PodcastColors.ForegroundTertiary)
+                    .foregroundColor(.accentColor)
                 
                 Button {} label: {
                     Image(systemName: "ellipsis")

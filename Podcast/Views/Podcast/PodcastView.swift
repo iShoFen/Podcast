@@ -55,7 +55,7 @@ struct PodcastView: View {
             ToolbarItem(placement: .navigationBarLeading) {
                 Button { presentationMode.wrappedValue.dismiss() } label: {
                     Image(systemName: "chevron.left")
-                        .tint(isTitleVisible ? .white : PodcastColors.ForegroundTertiary)
+                        .tint(isTitleVisible ? .white : .accentColor)
                         .padding(isTitleVisible ? 10 : 0)
                         .background(isTitleVisible ? PodcastColors.NavBarButton : .clear)
                         .clipShape(Circle())
@@ -72,7 +72,7 @@ struct PodcastView: View {
                 Button {} label: {
                     ZStack {
                         Image(systemName: "arrow.down")
-                            .tint(isTitleVisible ? .white : PodcastColors.ForegroundTertiary)
+                            .tint(isTitleVisible ? .white : .accentColor)
                             .padding(8)
                             .background(isTitleVisible ? PodcastColors.NavBarButton : PodcastColors.NavBar)
                             .clipShape(Circle())
@@ -84,7 +84,7 @@ struct PodcastView: View {
                             .tint(isTitleVisible ? topBackground : PodcastColors.NavBar)
                             .padding(3)
                             .frame(width: downloadWidth / 2.5, height: downloadHeight / 2.5)
-                            .background(isTitleVisible ? .white : PodcastColors.ForegroundTertiary)
+                            .background(isTitleVisible ? .white : .accentColor)
                             .clipShape(Circle())
                             .offset(x: downloadWidth / 3, y: downloadHeight / 3.5)
                     }
@@ -95,8 +95,8 @@ struct PodcastView: View {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button {} label: {
                     Image(systemName: "ellipsis")
-                        .tint(isTitleVisible ? .white : PodcastColors.ForegroundTertiary)
-                        .padding(13)
+                        .tint(isTitleVisible ? .white : .accentColor)
+                        .padding(15)
                         .background(isTitleVisible ? PodcastColors.NavBarButton : PodcastColors.NavBar)
                         .clipShape(Circle())
                 }
