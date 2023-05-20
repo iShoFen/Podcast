@@ -7,11 +7,13 @@
 
 import Foundation
 
-struct Podcast {
+struct Podcast: Hashable {
     let name: String
     let author: String
+    let authorImage: String?
     let image: String
+    let type: [String]
     let rating: Float
     let number: Int
-    let episodes: [Episode]
+    var episodes: [Episode]
 }
