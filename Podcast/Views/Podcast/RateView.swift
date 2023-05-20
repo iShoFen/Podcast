@@ -10,7 +10,7 @@ import SwiftUI
 struct RateView: View {
     var rate: CGFloat = 4.5
     var number: Int = 1000 
-    var type = "type"
+    var type: [String] = ["type"]
     var color = Color.black
     
     private var fRate: String {
@@ -23,7 +23,7 @@ struct RateView: View {
             Text(fRate)
                 .bold()
             Text("(\(number.stringSuffix))")
-            Text("•  \(type)")
+            Text("•  \(type.joined(separator: " • "))")
         }
         .font(.footnote)
         .foregroundColor(color)
