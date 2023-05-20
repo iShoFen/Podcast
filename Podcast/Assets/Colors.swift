@@ -12,7 +12,6 @@ public struct PodcastColors {
     static let backgroundPrimary = Color("BackgroundPrimary")
     static let ForegroundPrimary = Color("ForegroundPrimary")
     static let ForegroundSecondary = Color("ForegroundSecondary")
-    static let ForegroundTertiary = Color("ForegroundTertiary")
     static let Button = Color("Button")
     static let Divider = Color("Divider")
     static let NavBar = Color("NavBar")
