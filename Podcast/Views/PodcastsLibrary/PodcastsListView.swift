@@ -17,13 +17,18 @@ struct PodcastsListView: View {
         
     var body: some View {
         ForEach(podcasts, id: \.self) { podcast in
-            NavigationLink(destination: PodcastView(podcast: podcast,selectedPodcastImage: $selectedPodcastImage,
-                selectedEpisodeName:
-                $selectedEpisodeName,
-                selectedEpisodeDate:
-                $selectedEpisodeDate)) {
+            NavigationLink(destination:
+                            PodcastView(
+                                podcast: podcast,
+                                topBackground: Color(
+                                    UIImage(named: podcast.image)?.getDominantColor() ?? .blue),
+                                selectedPodcastImage: $selectedPodcastImage,
+                                selectedEpisodeName: $selectedEpisodeName,
+                                selectedEpisodeDate:$selectedEpisodeDate))
+            {
                 PodcastItemView(image: podcast.image, title: podcast.name, lastUpdate: podcast.episodes.first?.date ?? Date())
             }
+            // need to send the color here to avoir calclate it twice with the background and podcast header
         }
     }
 }

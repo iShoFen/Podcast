@@ -22,7 +22,7 @@ extension Date {
         
         if calendar.isDate(self, equalTo: now, toGranularity: .weekOfYear) {
             let selfFormatter = DateFormatter()
-            selfFormatter.dateFormat = "EEEE" // Renvoie le jour de la semaine
+            selfFormatter.dateFormat = "EEEE" // return day of the week
             
             return selfFormatter.string(from: self)
         }

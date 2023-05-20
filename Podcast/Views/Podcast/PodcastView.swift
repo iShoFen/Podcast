@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import ColorKit
 
 struct PodcastView: View {
     var podcast: Podcast
+    var topBackground: Color = .clear
     
     @Binding var selectedPodcastImage: String?
     @Binding var selectedEpisodeName: String?
@@ -19,9 +21,6 @@ struct PodcastView: View {
     @State private var downloadWidth: CGFloat = 0
     @State private var downloadHeight: CGFloat = 0
     @Environment(\.presentationMode) private var presentationMode
-
-    private var topBackground: Color { Color(UIImage(named: podcast.image)?.averageColor() ?? .clear)
-    }
     
     var body: some View {
         ZStack {
@@ -112,7 +111,7 @@ struct PodcastView_Previews: PreviewProvider {
         
         let date: Date? = nil
         let binding2 = Binding<Date?>(get: { date }, set: { _ in })
-        PodcastView(podcast: loadPodcast(2), selectedPodcastImage: binding1,
+        PodcastView(podcast: loadPodcast(3), selectedPodcastImage: binding1,
             selectedEpisodeName: binding1,
             selectedEpisodeDate: binding2)
     }
