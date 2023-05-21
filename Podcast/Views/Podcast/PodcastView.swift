@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import ColorKit
 
 struct PodcastView: View {
     var podcast: Podcast
@@ -98,6 +97,7 @@ struct PodcastView: View {
                         .padding(15)
                         .background(isTitleVisible ? PodcastColors.NavBarButton : PodcastColors.NavBar)
                         .clipShape(Circle())
+                        .offset(x: 10)
                 }
             }
         }

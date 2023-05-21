@@ -34,7 +34,7 @@ struct PodcastsLibraryView: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {} label: {
                         Image(systemName: "ellipsis")
-                            .padding()
+                            .padding(15)
                             .background(PodcastColors.NavBar)
                             .clipShape(Circle())
                             .offset(x: 10)
